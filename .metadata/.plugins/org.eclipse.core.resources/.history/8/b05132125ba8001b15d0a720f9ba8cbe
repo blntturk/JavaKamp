@@ -1,0 +1,57 @@
+package oopIntro;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Product product1 = new Product(1,"Lenovo 14",15000,"16 Gb Ram",10,13400); // örnek-referans-intance oluþturma.
+		
+		
+		// product1.id=1;
+		// product1.name="Lenovo 14";
+		// product1.unitPrice = 15000;
+		// product1.detail ="16 Gb Ram";
+	
+		Product product2 = new Product(); 
+		product2.setId(2);
+		product2.setName("Lenovo V15");
+		product2.setDetail("1 gb Ram");
+		product2.se
+		
+		Product product3 = new Product(); 
+	
+		
+	
+		Product[] products = {product1,product2,product3};
+		
+		for (Product product : products) {
+			
+			System.out.println(product.name);
+		}
+		
+		System.out.println(products.length);
+		
+		
+		Category category1= new Category();
+		category1.id=1;
+		category1.name ="Bilgisayar";
+	
+		Category category2= new Category();
+		category2.id=2;
+		category2.name ="Ev/Bahce";
+		
+		Category[] categorys = {category1,category2};
+		
+		for (Category category : categorys) {
+			System.out.println(category.name);
+		}
+		
+		ProductManager productManager= new ProductManager();
+		productManager.addToCart(product1);
+		
+		productManager.addToCart(product2);
+		
+		productManager.addToCart(product3);
+}
+
+}

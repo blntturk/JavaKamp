@@ -1,0 +1,14 @@
+package inheritance2;
+
+public class CustomerManager {
+	public void add(Logger logger) {
+		// Müþteri ekleme kodlarý
+		System.out.println("Müsteri eklendi");
+		// Bir Ýþ yapan sýnýf baþka bir iþ yapan sýnýfý kullanacaksa asla somut sýnýftan
+		// gidilmez. (Yani DataBaseLogger bu þekilde kullanýlmamalý. Bir iþ yapan sýnýf
+		// içinde baþka bir iþ yapan sýnýf new lenirse sürdürülebilir olmaz. 
+		// üstte add()fonksiyonunda parametre olarak add(Logger logger) yaazýlmalý
+		// DataBaseLogger logger = new DataBaseLogger();
+		logger.log(); // buradaki .log() somut sýnýf içindeki log() lara Logger sýnýfý içinden ulasabiliyor (exdends)
+	}
+}

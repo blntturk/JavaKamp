@@ -1,0 +1,12 @@
+package oopIntro;
+// Özellik tutucu Class, Ýþ Yapan (Maneger, Services) Class olmak üzere iki tür class.
+public class ProductManager {
+	public void addToCart(Product product) {    // iþ yapan class metodu (void-yap)
+		System.out.println("Sepete Eklendi :" + product.name);
+	
+	}
+	
+	public void delFromCart(Product product) {
+		System.out.println("Sepetten Kladýrýldý :" + product.name);
+	}
+}

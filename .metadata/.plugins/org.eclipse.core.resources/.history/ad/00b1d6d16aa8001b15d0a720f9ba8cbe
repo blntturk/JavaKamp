@@ -1,0 +1,9 @@
+package inheritance2;
+
+public class CustomerManager {
+	public void add() {
+		System.out.println("Müsteri eklendi");
+		DataBaseLogger logger=new DataBaseLogger();
+		logger.log();
+	}
+}

@@ -1,0 +1,16 @@
+package oopIntro;
+
+public class Product {
+
+	public Product(){    // Constractor (yapýcý) blogu
+		System.out.println("Ben Çalýþtým");
+	}
+	
+	public Product(int id,String name, double unitPrice, String detail) {
+	
+		
+	}
+	
+
+	
+}

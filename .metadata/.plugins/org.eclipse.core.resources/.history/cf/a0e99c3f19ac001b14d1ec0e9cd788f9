@@ -1,0 +1,28 @@
+package interfaces;
+
+public class CustomerManager {
+	private Logger logger;
+
+	public CustomerManager(Logger logger) {
+
+		this.logger = logger;
+	}
+
+// 	loosly -tightly coupled ( gevsek ve katý baðlýlýk). Kötü kodda Databaselogger a katý bagýmlý olduk. 
+//  Gevsek bagýmlýlýga gecmek için neye bagýmlýysak onun private deðiþkenini yaparýz.üstteki gibi( private Logger logger;)
+	
+	public void add(Customer customer) {
+		System.out.println("Müþteri eklendi :" + customer.getFirstName());
+//		DataBaseLogger logger = new DataBaseLogger();
+//		logger.log(customer.getFirstName() + " veritabanýna loglandý");
+		
+		this.logger.log(customer.getFirstName());
+
+	}
+
+	public void delete(Customer customer) {
+		System.out.println("Müþteri silindi :" + customer.getFirstName());
+//		DataBaseLogger logger = new DataBaseLogger();
+//		logger.log(customer.getFirstName() + " veritabanýna loglandý");
+	}
+}

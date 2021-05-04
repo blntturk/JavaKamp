@@ -1,0 +1,29 @@
+package oopIntro;
+
+public class Product {
+
+	public Product() { // parametresiz Constructor (yapýcý) blogu
+		System.out.println("Ben Çalýþtým");
+	}
+
+	public Product(int id, String name, double unitPrice, String detail) { // Parametreli Constructor blogu. imza örneði.
+																			 
+
+		// üstteki imzada bulunan deðerler (id, name vs.) dýsarýdan eriþilemez. eriþmek
+		// için this ile bu classtaki deðerlerle asaðýdaki dýsardan eriþilen deðerlerle eþitleyip
+		// eriþime acarýz.boþ parametresiz Product çalýþýr. "Ben Çalýþtým" kýsmý...
+		
+		// this(); 
+		this.id = id;
+		this.name = name;
+		this.unitPrice = unitPrice;
+		this.detail = detail;
+
+	}
+
+	int id;
+	String name;
+	double unitPrice;
+	String detail;
+
+}
